@@ -2,12 +2,10 @@
 let num=34;
 
 diffOrabsDouble =() =>{
-    if (num <= 13) {
+    if (num <= 13)
         return (13-num);
-    }else {
-        var absDouble=Math.abs(13-num)*2;
-        return (absDouble);
-    }
+    else 
+        return Math.abs(13-num)*2;
 }
 
 // console.log(diffOrabsDouble());
@@ -19,7 +17,7 @@ diffOrabsDouble = (n) =>{
             return (13-n);
             break;
         case false:
-            return absDble = (13-n)*(-2);   
+            return (13-n)*(-2);   
             break; 
         default:
             return 0;
@@ -27,4 +25,4 @@ diffOrabsDouble = (n) =>{
     }
 };
 
-console.log(diffOrabsDouble(17));
+console.log(diffOrabsDouble(2));

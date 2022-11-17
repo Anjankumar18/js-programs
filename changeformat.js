@@ -1,17 +1,30 @@
-var hrs = new Date().getHours();
-// var hrs = 24;
+var hrs = '14:00';
 
 changeformat = (hrs) => {
-    if (hrs > 12 && hrs < 24) {
-        var formatch = hrs-(12);
-        return formatch+"pm";
-    }else if (hrs === 12) {
-        return hrs + "pm"
-    }else if (hrs === 24 ) {
-        return (hrs-12) + "am";
+    const hrarr = hrs.split(':');
+    if (hrarr[0] > 12 && hrarr[0] < 24) {
+        var formatch = hrarr[0]-(12);
+        return formatch + ":" + hrarr[1]+ " PM";
+    }else if (hrarr[0] == 12) {
+        return hrs + " PM"
+    }else if(hrarr[0] < 12){
+        return hrs + " AM";
     }
-    return hrs+"am";
 }
 
-console.log( changeformat(hrs));
+// console.log(changeformat(hrs));
+
+function format12hr(hrs) {
+    const hrarr = hrs.split(':');
+    if (hrarr[0] > 12 && hrarr[0] < 24) {
+        const to12=hrarr[0] % 12;
+        return to12 + ":"+ hrarr[1] + " PM"; 
+    } else if(hrarr[0] == 12) {
+        return hrs +" PM";
+    }else if ((hrarr[0] < 12)){
+        return hrs + " AM";
+    }
+}
+console.log(format12hr(hrs));
+
 

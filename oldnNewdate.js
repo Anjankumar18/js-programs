@@ -14,8 +14,8 @@ oldnNewdate = () =>{
 
 
     var nextyear = new Date().getUTCFullYear()+1;
-    var date2 = new Date().setUTCFullYear(nextyear);
-    var nexty = new Date(date2).toDateString();
+    var date2 = new Date().setUTCFullYear(nextyear);;
+    var nexty = new Date(nextyear).toDateString();
     console.log("Date After 1 year :" + nexty);
 }
 
